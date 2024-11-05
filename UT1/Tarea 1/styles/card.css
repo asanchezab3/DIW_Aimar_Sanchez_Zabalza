@@ -1,0 +1,31 @@
+        /* Estilos para el contenedor principal */
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            /* Espacio entre las tarjetas */
+            flex-wrap: wrap;
+            /* Permite que las tarjetas se ajusten si no hay espacio */
+            gap: 20px;
+            /* Espacio entre las tarjetas */
+            padding: 20px;
+        }
+
+        /* Estilos para cada tarjeta */
+        .card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1 1 calc(33.333% - 40px);
+            /* Ajusta la anchura de las tarjetas */
+            max-width: calc(33.333% - 40px);
+            box-sizing: border-box;
+        }
+
+        /* Asegura que las imágenes no sobrepasen el tamaño de la tarjeta */
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
