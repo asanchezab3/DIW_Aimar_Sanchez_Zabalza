@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de errores de accesibilidad</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <!-- Agrupado en un div -->
+    <div>
+        <h1>Artículos populares</h1>
+        <!-- Los articulos tienen la correspondiente etiqueta article -->
+        <article>
+            <!-- Mejorado texto alt -->
+            <img src="./img/img1.jpg" alt="Logo de una empresa">
+            <p>Esta imagen es el logo de una empresa colaboradora en este proyecto.</p>
+        </article>
+        <article>
+            <!-- Añadida etiqueta alt -->
+            <img src="./img/img2.jpg" alt="Tablet con una noticia">
+            <p>Imagen de una una tablet cuyo contenido de pantalla es una noticia.</p>
+        </article>
+    </div>
+    <!-- Agrupado en otro div -->
+    <div>
+        <h2>Noticias recientes</h2>
+        <table>
+            <!-- Añadida cabezera a la tabla -->
+            <thead>
+                <th scope="col">Título</th>
+            </thead>
+            <!-- Añadido body a la tabla -->
+            <tbody>
+                <tr>
+                    <td><a target="_blank"
+                            href="https://www.diariodenavarra.es/noticias/deportes/pelota/2024/11/26/campeonato-parejas-el-duro-camino-navarra-arena-630197-1053.html">El
+                            nudo del Campeonato de Parejas</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank"
+                            href="https://www.diariodenavarra.es/noticias/vivir/turismo/2024/11/26/pamplona-10-destinos-preferidos-viajar-el-puente-constitucion-630196-3193.html">Pamplona,
+                            dentro de los 10 destinos preferidos para viajar en el puente de la Constitución</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

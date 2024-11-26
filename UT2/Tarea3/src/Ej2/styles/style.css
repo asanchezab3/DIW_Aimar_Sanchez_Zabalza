@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #0056b3;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+td a {
+    display: block;
+    padding: 5px;
+    text-align: center;
+}
