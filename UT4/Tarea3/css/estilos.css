@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+/* Reglas generales */
+/* Definimos las variables de colores */
+:root {
+    --text-color: rgb(23, 23, 23);
+    --primary-color: rgb(91, 73, 254);
+    --secondary-color: rgb(125, 232, 140);
+    --secondary-light-color: rgb(207, 243, 125);
+}
+
+/* Reset margenes y paddings */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+.title {
+    font-family: "Poppins", sans-serif;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 1.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+/* 
+Las siguientes reglas permiten que los elementos con la clase container se adapten de manera óptima a diferentes dispositivos.
+La clase .container asegura que el elemento ocupe el 100% del ancho de la pantalla del dispositivo, aplicando un relleno de 15 píxeles tanto a la izquierda como a la derecha, y márgenes automáticos en ambos lados para centrar el contenido.
+Además, utilizaremos media queries para definir la anchura máxima del contenedor en función del ancho mínimo especificado por cada punto de ruptura (breakpoint), asegurando así un diseño responsivo.
+*/
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+/* Bloques generales de la plantilla */
+header {
+    height: 115px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(13, 10, 44, 0.04);
+}
+
+header .link-logo {
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+header .logo {
+    height: 50px;
+    width: auto;
+    margin-right: 5px;
+}
+
+header .menu-links li {
+    margin-right: 15px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+header .menu-links a {
+    color: black;
+}
+
+/* Revisar */
+header .menu-links li.active a {
+    font-weight: 700;
+}
+
+main {
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+}
+
+main a {
+    border-bottom: 1px dotted var(--primary-color);
+}
+
+main a:hover {
+    border-color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    margin-top: auto;
+    font-size: 0.9rem;
+    font-weight: 500;
+    height: 90px;
+}
+
+footer a {
+    color: white;
+}
+
+footer .legal-links {
+    margin-top: 5px;
+}
+
+footer .legal-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* pagina home */
+.page-home header {
+    background: transparent;
+    box-shadow: none;
+    position: fixed;
+    width: 100%;
+}
+
+.page-home {
+    background: linear-gradient(75deg, var(--secondary-light-color) 0%, var(--secondary-color));
+}
+
+.page-home main {
+    padding: 0;
+}
+
+.page-home .title {
+    font-size: 3.4rem;
+    margin-bottom: 15px;
+    line-height: 4rem;
+}
+
+.page-home .title span {
+    color: white;
+}
+
+.page-home .featured {
+    max-width: 470px;
+}
+
+.page-home main .container {
+    min-height: calc(100vh - 90px);
+    background: url(./../images/hero_image_bg.png) 100% 100% no-repeat;
+    background-size: 700px auto;
+    padding-top: 150px;
+    padding-bottom: 120px;
+}
+
+.page-home main .featured .featured-text {
+    margin-bottom: 25px;
+}
+
+.search-bar .search-control {
+    padding-left: 45px;
+    height: 58px;
+    background: #fff url(./../images/icon_search.svg) 5px 50% no-repeat;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Pagina camisetas */
+.page-tshirt main {
+    min-height: calc(100vh - 205px);
+}
+
+.table {
+    width: 100%;
+    margin: 30px;
+    border-collapse: collapse;
+}
+
+.table,
+.table th,
+.table td {
+    border: 1px solid black;
+}
+
+.table th {
+    background: var(--secondary-light-color);
+    padding: 5px
+}
+
+.table thead th {
+    text-align: center;
+}
+
+.table tbody th {
+    text-align: left;
+}
+
+.table thead th:first-child {
+    background-color: var(--secondary-color);
+}
+
+.table td {
+    background: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.table tr:nth-child(odd) td {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.table caption {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
