@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.container {
+    min-height: 100vh; /* Se adapta mejor en móviles */
+    width: 100%;
+    background: red;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+    text-align: center;
+}
+.header {
+    font-size: 10vw;
+    font-weight: bold;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.image {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    background: url('./../images/zetak-ilunbe.jpg') center/cover;
+    aspect-ratio: 16 / 9;
+}
+.image-caption {
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+.footer {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+@supports (display: grid) {
+    .container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        align-items: center;
+        gap: 10px; /* Mejora la separación */
+    }
+}
+
+@supports not (aspect-ratio: 16 / 9) {
+    .image {
+        height: calc(80vw * 9 / 16); /* Alternativa manual */
+    }
+}
