@@ -1,0 +1,44 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.000
+Buenas, hoy os vengo a presentar el proyecto Adoptame.
+
+00:00:03.000 --> 00:00:12.000
+Que su principal objetivo es conseguir la adopción de más animales para que así tengan una familia.
+
+00:00:12.000 --> 00:00:17.000
+Si pulsamos en el botón animales, podemos ver toda la lista de animales.
+
+00:00:17.000 --> 00:00:20.000
+Podemos filtrar por el tipo de animal.
+
+00:00:20.000 --> 00:00:23.000
+Pulsando el botón aplicar filtro, los vemos (los animales que coincidan con ese resultado).
+
+00:00:23.000 --> 00:00:28.000
+Y si pulsamos sobre el animal, veremos su detalle.
+
+00:00:28.000 --> 00:00:32.000
+También tenemos un formulario de contacto.
+
+00:00:32.000 --> 00:00:35.000
+Que por defecto, no se cargan los datos.
+
+00:00:35.000 --> 00:00:41.000
+Aquí vemos (número de teléfono, dirección, correo electrónico) y redes sociales.
+
+00:00:41.000 --> 00:00:44.000
+Y si iniciamos sesión.
+
+00:00:44.000 --> 00:00:55.000
+Por defecto, se nos cargarán los datos del usuario que está registrado.
+
+00:00:55.000 --> 00:01:02.000
+Como punto fuerte de la aplicación, esta aplicación, como bien he comentado,
+
+00:01:02.000 --> 00:01:08.000
+cuenta con filtrado y con un detalle de animal bastante completo.
+
+00:01:08.000 --> 00:01:13.000
+Aunque este botón botón no esté habilitado.
+
