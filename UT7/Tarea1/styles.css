@@ -1,0 +1,153 @@
+:root {
+    --marron: #835B4D;
+    --blanco: #fff;
+    --fuente: 'Segoe UI', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente);
+    background-color: #fff;
+    color: var(--marron);
+}
+
+.header {
+    background-color: var(--marron);
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+.logo svg {
+    fill: var(--blanco);
+}
+
+.nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #e8dcd6;
+}
+
+.presentacion {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.presentacion h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.presentacion p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.galeria {
+    padding: 2rem 1rem;
+    background-color: #f5f2f0;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mascotas {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out both;
+}
+
+.card {
+    background-color: var(--marron);
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--blanco);
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card svg {
+    margin-bottom: 0.5rem;
+}
+
+.cta {
+    background-color: var(--marron);
+    color: var(--blanco);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 1rem;
+}
+
+.boton-cta {
+    display: inline-block;
+    background-color: var(--blanco);
+    color: var(--marron);
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+    transition: background-color 0.3s;
+}
+
+.boton-cta:hover {
+    background-color: #e8dcd6;
+}
+
+@keyframes dibujar {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.card svg line,
+.card svg path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dibujar 2s ease forwards;
+}
+
+@media (min-width: 600px) {
+    .mascotas {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
